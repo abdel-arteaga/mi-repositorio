@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
+// main
 public class RegistroUsuarios {
     private ArrayList<Usuario> usuarios;
 
