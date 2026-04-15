@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Libro</title>
+</head>
+<body>
+
+<h2>Editar libro</h2>
+
+<form method="POST">
+    <input name="titulo" value="{{ libro.titulo }}"><br><br>
+    <input name="autor" value="{{ libro.autor }}"><br><br>
+    <input name="genero" value="{{ libro.genero }}"><br><br>
+
+    <select name="estado">
+        <option {% if libro.estado == 'Leído' %}selected{% endif %}>Leído</option>
+        <option {% if libro.estado == 'No leído' %}selected{% endif %}>No leído</option>
+    </select><br><br>
+
+    <button>Actualizar</button>
+</form>
+
+<a href="/">Volver</a>
+
+</body>
+</html>

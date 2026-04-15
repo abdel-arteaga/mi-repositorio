@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biblioteca</title>
+</head>
+<body>
+
+<h1>Biblioteca Personal</h1>
+
+<a href="/agregar">Agregar libro</a>
+
+<form action="/buscar">
+    <input type="text" name="q" placeholder="Buscar libro">
+    <button>Buscar</button>
+</form>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for msg in messages %}
+      <p style="color:green;">{{ msg }}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<hr>
+
+{% for libro in libros %}
+    <div>
+        <h3>{{ libro.titulo }}</h3>
+        <p><b>Autor:</b> {{ libro.autor }}</p>
+        <p><b>Género:</b> {{ libro.genero }}</p>
+        <p><b>Estado:</b> {{ libro.estado }}</p>
+
+        <a href="/editar/{{ libro.id }}">Editar</a>
+        <a href="/eliminar/{{ libro.id }}">Eliminar</a>
+    </div>
+    <hr>
+{% endfor %}
+
+</body>
+</html>
