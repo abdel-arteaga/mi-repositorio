@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Editar libro</h2>
+
+<form method="POST">
+    Título: <input type="text" name="titulo" value="{{ libro.titulo }}"><br>
+    Autor: <input type="text" name="autor" value="{{ libro.autor }}"><br>
+    Género: <input type="text" name="genero" value="{{ libro.genero }}"><br>
+
+    Estado:
+    <select name="estado">
+        <option {% if libro.estado == "Leído" %}selected{% endif %}>Leído</option>
+        <option {% if libro.estado == "No leído" %}selected{% endif %}>No leído</option>
+    </select>
+
+    <button type="submit">Actualizar</button>
+</form>
+
+{% endblock %}

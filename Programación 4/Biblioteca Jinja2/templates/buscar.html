@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Buscar libros</h2>
+
+<form method="POST">
+    <select name="criterio">
+        <option value="titulo">Título</option>
+        <option value="autor">Autor</option>
+        <option value="genero">Género</option>
+    </select>
+
+    <input type="text" name="valor">
+    <button type="submit">Buscar</button>
+</form>
+
+<hr>
+
+{% if resultados %}
+    <ul>
+    {% for libro in resultados %}
+        <li>{{ libro.titulo }} - {{ libro.autor }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{% endblock %}

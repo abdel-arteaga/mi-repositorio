@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Lista de libros</h2>
+
+<table border="1">
+<tr>
+    <th>ID</th>
+    <th>Título</th>
+    <th>Autor</th>
+    <th>Acciones</th>
+</tr>
+
+{% for libro in libros %}
+<tr>
+    <td>{{ libro.id }}</td>
+    <td>{{ libro.titulo }}</td>
+    <td>{{ libro.autor }}</td>
+    <td>
+        <a href="/editar/{{ libro.id }}">Editar</a>
+        <a href="/eliminar/{{ libro.id }}">Eliminar</a>
+    </td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}

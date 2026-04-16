@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>¿Eliminar libro?</h2>
+
+<p>{{ libro.titulo }} - {{ libro.autor }}</p>
+
+<form method="POST">
+    <button type="submit">Sí, eliminar</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biblioteca</title>
+</head>
+<body>
+
+<nav>
+    <a href="/">Inicio</a>
+    <a href="/agregar">Agregar</a>
+    <a href="/buscar">Buscar</a>
+</nav>
+
+<div class="container">
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for msg in messages %}
+      <div class="flash">{{ msg }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+{% block content %}{% endblock %}
+
+</div>
+
+</body>
+</html>
