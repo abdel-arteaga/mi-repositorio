@@ -1,0 +1,4 @@
+BASE_URL = "https://pokeapi.co/api/v2"
+TIMEOUT = 5
+RETRIES = 3
+SLEEP_BETWEEN_REQUESTS = 0.2
