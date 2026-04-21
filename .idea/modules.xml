@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Actividades/Actividades.iml" filepath="$PROJECT_DIR$/Actividades/Actividades.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Parciales/Parciales.iml" filepath="$PROJECT_DIR$/Parciales/Parciales.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programación 2/Actividades/Actividades.iml" filepath="$PROJECT_DIR$/Programación 2/Actividades/Actividades.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programación 2/Parciales/Parciales.iml" filepath="$PROJECT_DIR$/Programación 2/Parciales/Parciales.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/mi-repositorio.iml" filepath="$PROJECT_DIR$/.idea/mi-repositorio.iml" />
     </modules>
   </component>
