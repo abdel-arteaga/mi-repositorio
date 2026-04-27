@@ -35,7 +35,7 @@ def buscar():
 
     if resultados:
         for a in resultados:
-            print(a)
+            print(f"{a['id'][:6]} | {a['nombre']} | {a['categoria']}")
     else:
         print("No encontrado.")
 

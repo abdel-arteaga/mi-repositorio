@@ -1,7 +1,5 @@
 [
-  {"year": 2000, "coverage": 85},
-  {"year": 2005, "coverage": 92},
-  {"year": 2010, "coverage": 95},
-  {"year": 2015, "coverage": 97},
-  {"year": 2020, "coverage": 94}
+  {"anio": 2000, "valor": 85},
+  {"anio": 2001, "valor": 87},
+  {"anio": 2002, "valor": 88}
 ]

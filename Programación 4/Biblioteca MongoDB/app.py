@@ -1,5 +1,9 @@
 from db import conectar
+
+
 from bson import ObjectId
+
+
 
 coleccion = conectar()
 
@@ -110,7 +114,7 @@ def buscar_libros():
 # MENÚ
 # -------------------------
 def menu():
-    if not coleccion:
+    if coleccion is None:
         print("Error de conexión con la base de datos")
         return
 

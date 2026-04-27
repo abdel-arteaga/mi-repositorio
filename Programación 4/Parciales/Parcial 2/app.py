@@ -4,33 +4,45 @@ import json
 app = Flask(__name__)
 
 def load_data():
-    with open("data.json") as f:
+    with open("data.json", "r") as f:
         return json.load(f)
 
+# -------------------------
+# GET /vacunas
+# -------------------------
 @app.route("/vacunas", methods=["GET"])
-def get_all():
-    return jsonify(load_data())
-
-@app.route("/vacunas/<int:year>", methods=["GET"])
-def get_by_year(year):
+def obtener_todo():
     data = load_data()
-    for d in data:
-        if d["year"] == year:
-            return jsonify(d)
-    return jsonify({"error": "No encontrado"}), 404
+    return jsonify(data)
 
+# -------------------------
+# GET /vacunas/<año>
+# -------------------------
+@app.route("/vacunas/<int:anio>", methods=["GET"])
+def obtener_por_anio(anio):
+    data = load_data()
+
+    for registro in data:
+        if registro["anio"] == anio:
+            return jsonify(registro)
+
+    return jsonify({"error": "Año no encontrado"}), 404
+
+# -------------------------
+# (OPCIONAL) provincia
+# -------------------------
 @app.route("/vacunas/provincia/<nombre>", methods=["GET"])
-def get_by_provincia(nombre):
+def por_provincia(nombre):
     data = load_data()
-    simulated = [
-        {
-            "provincia": nombre,
-            "year": d["year"],
-            "coverage": d["coverage"] - 2
-        }
-        for d in data
-    ]
-    return jsonify(simulated)
 
+    # Simulación simple
+    return jsonify({
+        "provincia": nombre,
+        "datos": data
+    })
+
+# -------------------------
+# RUN
+# -------------------------
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,20 +1,10 @@
-import uuid
-
-class Article:
-    def __init__(self, nombre, categoria, cantidad, precio, descripcion):
-        self.id = str(uuid.uuid4())
-        self.nombre = nombre
-        self.categoria = categoria
-        self.cantidad = cantidad
-        self.precio = precio
-        self.descripcion = descripcion
-
-    def to_dict(self):
-        return {
-            "id": self.id,
-            "nombre": self.nombre,
-            "categoria": self.categoria,
-            "cantidad": self.cantidad,
-            "precio": self.precio,
-            "descripcion": self.descripcion
-        }
+[
+    {
+        "id": "4b3a1f43-cd7b-48a9-8ee8-536dfcbc9cb7",
+        "nombre": "Libro",
+        "categoria": "Bien",
+        "cantidad": 1,
+        "precio": 5.0,
+        "descripcion": "Entretenimiento"
+    }
+]
