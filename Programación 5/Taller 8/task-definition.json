@@ -1,0 +1,31 @@
+{
+  "name": "taller-8",
+  "image": "288638162072.dkr.ecr.us-east-2.amazonaws.com/taller8:latest",
+  "cpu": 0,
+  "portMappings": [
+    {
+      "containerPort": 5000,
+      "hostPort": 5000,
+      "protocol": "tcp",
+      "name": "taller-8-5000-tcp",
+      "appProtocol": "http"
+    }
+  ],
+  "essential": true,
+  "environment": [],
+  "environmentFiles": [],
+  "mountPoints": [],
+  "volumesFrom": [],
+  "ulimits": [],
+  "logConfiguration": {
+    "logDriver": "awslogs",
+    "options": {
+      "awslogs-group": "/ecs/taller-8-task",
+      "awslogs-create-group": "true",
+      "awslogs-region": "us-east-2",
+      "awslogs-stream-prefix": "ecs"
+    },
+    "secretOptions": []
+  },
+  "systemControls": []
+}
