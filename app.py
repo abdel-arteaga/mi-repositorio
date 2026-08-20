@@ -10,7 +10,7 @@ HTML = """
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>E-commerce AWS</title>
+<title>E-commerce AWS — v2</title>
 <style>
 body{font-family:Arial,sans-serif;max-width:800px;margin:60px auto;padding:20px}
 .card{border:1px solid #ddd;border-radius:10px;padding:24px;margin-top:20px}
@@ -18,7 +18,7 @@ body{font-family:Arial,sans-serif;max-width:800px;margin:60px auto;padding:20px}
 </style>
 </head>
 <body>
-<h1>E-commerce AWS</h1>
+<h1>E-commerce AWS — v2</h1>
 <p>Aplicación ejecutándose en Amazon ECS Fargate.</p>
 <div class="card">
 <h2>Estado de la aplicación</h2>
