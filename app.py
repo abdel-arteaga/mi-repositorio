@@ -88,7 +88,7 @@ def index():
         status=(
             "Aplicación y base de datos funcionando"
             if ok
-            else "Aplicación funcionando; RDS pendiente de conexión"
+            else "Aplicacion funcionando; RDS pendiente de conexión"
         ),
         detail=detail,
         css="ok" if ok else "error",
